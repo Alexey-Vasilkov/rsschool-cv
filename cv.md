@@ -7,9 +7,9 @@
   * CSS;
   * JavaScript.
 * I am eager to master some of the main frameworks for JavaScript such as:
- * Node; 
- * React;
- * Vue.
+	* Node; 
+	* React;
+	* Vue.
 * [Code Sample](https://github.com/Alexey-Vasilkov/my-JS-projects/blob/master/hw5_4day.js)
 * I have no prior work experience in IT field. I am attending JS courses from Andersen company. We are in the middle of writing a final project. It takes 3 people to work on that project. I will post the code when we finish.
 * The courses that I am taking are Andersen course and RS School course. Also self-study on [learnjavascript](https://learn.javascript.ru) and [w3school](https://www.w3schools.com).
