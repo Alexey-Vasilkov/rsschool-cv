@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cv_content {
+}
+
+.avatar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  margin-top: 35px;
+}
+
+.text {
+  width: 75%;
+  line-height: 32px;
+}
+
+.link {
+  text-decoration: none;
+}
