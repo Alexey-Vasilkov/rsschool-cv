@@ -62,6 +62,12 @@ $footer-gradient-background: url(/assets/noise_transparent.png),
   letter-spacing: 0.055rem;
 }
 
+@mixin h5_modal_window {
+  font-size: 1rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
 @mixin paragraph-l {
   font: {
     family: Arial;
@@ -659,6 +665,94 @@ body {
 
 .phone:hover {
   cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal_window {
+  margin-right: 3.25rem;
+  display: flex;
+  justify-content: space-evenly;
+  background: $color-light-s;
+  border: none;
+  border-radius: 0.5rem;
+  width: 56.25rem;
+}
+
+.modal_picture {
+  width: 31.25rem;
+  height: 31.25rem;
+}
+
+.modal_picture_pet {
+  width: 100%;
+  height: auto;
+}
+
+.modal_content {
+  width: 22rem;
+  height: 16.5rem;
+  padding: 3.125rem 1.25rem 0 1.82rem;
+  color: #000000;
+}
+
+.modal_title {
+  @include h3;
+}
+
+.modal_subtitle {
+  @include h4;
+  padding: 1.5rem 0 2rem 0;
+}
+
+.modal_description {
+  @include h5;
+  padding-bottom: 1rem;
+}
+
+.pet_properties {
+  @include h5_modal_window;
+}
+
+.modal_close_button {
+  height: 3.25rem;
+  width: 3.25rem;
+  border: 2px solid $color-primary-color;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(41, 41, 41, 0.6);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
 
 @media only screen and (max-width: 768px) {

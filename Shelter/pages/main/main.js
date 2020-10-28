@@ -35,16 +35,13 @@ const itemWidth = container.clientWidth / slidesToShow;
 if (container.clientWidth < 768) {
   slidesToShow = 1;
 };
-console.log(slidesToShow);
-console.log(container.clientWidth);
 const movePosition = slidesToScroll * itemWidth;
 
 items.forEach((items) => {
   items.style.minWidth = `272px`;
 });
 
-btnNext.addEventListener('click', () => {
-  console.log(itemWidth);  
+btnNext.addEventListener('click', () => {   
   const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
   
   position -= itemsLeft >= slidesToScroll? movePosition : itemsLeft * itemWidth;
@@ -62,8 +59,7 @@ btnPrev.addEventListener('click', () => {
   checkBtns();
 });
 
-const setPosition = () => {
-  console.log(position);
+const setPosition = () => { 
   track.style.transform = `translateX(${position}px)`;
 };
 
@@ -74,5 +70,77 @@ const checkBtns = () => {
 
 checkBtns();
 
+// Modal window
 
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
 
+let petId = 0;
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    reply_click();
+    readFile();    
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);    
+  });
+});
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active');
+  modals.forEach(modal => {
+    closeModal(modal);
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
+
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('active');
+  overlay.classList.add('active');  
+}
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+// connecting JSON file
+const picture = document.querySelector('.modal_picture_pet');
+const title = document.querySelector('.modal_title');
+const subtitle = document.querySelector('.modal_subtitle');
+const description = document.querySelector('.modal_description');
+const age = document.querySelector('.modal_age');
+const inoculations = document.querySelector('.modal_inoculations');
+const diseases = document.querySelector('.modal_diseases');
+const parasites = document.querySelector('.modal_parasites');
+
+function reply_click()
+  {  
+    petId = event.target.id;
+  }
+
+async function readFile() {  
+  let response = await fetch('pets.JSON');
+  if (response.ok) {
+    let json = await response.json();     
+    picture.setAttribute("src", json[petId].img);
+    picture.setAttribute("alt", json[petId].name);
+    title.innerHTML = json[petId].name;
+    subtitle.innerHTML = `${json[petId].type} - ${json[petId].breed}`;
+    description.innerHTML = json[petId].description;
+    age.innerHTML = `<strong>Age:</strong> ${json[petId].age}`;
+    inoculations.innerHTML = `<strong>Inoculations:</strong> ${json[petId].inoculations}`;
+    diseases.innerHTML = `<strong>Diseases:</strong> ${json[petId].diseases}`;
+    parasites.innerHTML = `<strong>Parasites:</strong> ${json[petId].parasites}`;
+
+  }
+}

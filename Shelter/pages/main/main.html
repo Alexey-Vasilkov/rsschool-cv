@@ -85,45 +85,45 @@
               <button class="slider__button btn-prev">←</button>
               <div class="slider__content">
                 <div class="slider__track">
-                  <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Katrine.png" alt="Katrine" />
-                  <div class="name">Katrine</div>
-                  <button class="secondary_button">Learn more</button>
+                  <div data-modal-target="#modal" class="slider__item" id="4">
+                  <img class="slider__img" id="4" src="../../assets/Katrine.png" alt="Katrine" />
+                  <div class="name" id="4">Katrine</div>
+                  <button class="secondary_button" id="4">Learn more</button>
                 </div>
-                <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Jennifer.png" alt="Jennifer" />
-                  <div class="name">Jennifer</div>
-                  <button class="secondary_button">Learn more</button>
+                <div data-modal-target="#modal" class="slider__item" id="0">
+                  <img class="slider__img" id="0" src="../../assets/Jennifer.png" alt="Jennifer" />
+                  <div class="name" id="0">Jennifer</div>
+                  <button class="secondary_button" id="0">Learn more</button>
                 </div>
-                <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Woody.png" alt="Woody" />
-                  <div class="name">Woody</div>
-                  <button class="secondary_button">Learn more</button>
+                <div data-modal-target="#modal" class="slider__item" id="2">
+                  <img class="slider__img" id="2" src="../../assets/Woody.png" alt="Woody" />
+                  <div class="name" id="2">Woody</div>
+                  <button class="secondary_button" id="2">Learn more</button>
                 </div>                
-                <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Sophia.png" alt="Sophia" />
-                  <div class="name">Sophia</div>
-                  <button class="secondary_button">Learn more</button>
+                <div data-modal-target="#modal" class="slider__item" id="1">
+                  <img class="slider__img" id="1" src="../../assets/Sophia.png" alt="Sophia" />
+                  <div class="name" id="1">Sophia</div>
+                  <button class="secondary_button" id="1">Learn more</button>
                 </div>
-                <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Timmy.png" alt="Timmy" />
-                  <div class="name">Timmy</div>
-                  <button class="secondary_button">Learn more</button>
+                <div data-modal-target="#modal" class="slider__item" id="5">
+                  <img class="slider__img" id="5" src="../../assets/Timmy.png" alt="Timmy" />
+                  <div class="name" id="5">Timmy</div>
+                  <button class="secondary_button" id="5">Learn more</button>
                 </div>
-                <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Charly.png" alt="Charly" />
-                  <div class="name">Charly</div>
-                  <button class="secondary_button">Learn more</button>
+                <div data-modal-target="#modal" class="slider__item" id="7">
+                  <img class="slider__img" id="7" src="../../assets/Charly.png" alt="Charly" />
+                  <div class="name" id="7">Charly</div>
+                  <button class="secondary_button" id="7">Learn more</button>
                 </div>
-                <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Scarlett.png" alt="Scarlett" />
-                  <div class="name">Scarlett</div>
-                  <button class="secondary_button">Learn more</button>
+                <div data-modal-target="#modal" class="slider__item" id="3">
+                  <img class="slider__img" id="3" src="../../assets/Scarlett.png" alt="Scarlett" />
+                  <div class="name" id="3">Scarlett</div>
+                  <button class="secondary_button" id="3">Learn more</button>
                 </div>
-                <div class="slider__item">
-                  <img class="slider__img" src="../../assets/Freddie.png" alt="Freddie" />
-                  <div class="name">Freddie</div>
-                  <button class="secondary_button">Learn more</button>
+                <div data-modal-target="#modal" class="slider__item" id="6">
+                  <img class="slider__img" id="6" src="../../assets/Freddie.png" alt="Freddie" />
+                  <div class="name" id="6">Freddie</div>
+                  <button class="secondary_button" id="6">Learn more</button>
                 </div>
                 </div>
                 
@@ -273,6 +273,24 @@
         </div>
       </div>
     </main>
-    <script src="main.js"></script>
+    <div class="modal" id="modal">
+      <button data-close-button class="modal_close_button">&times;</button>
+    <div class="modal_window">      
+      <div class="modal_picture">
+        <img class="modal_picture_pet" src="" alt="">       
+      </div>
+      <div class="modal_content">
+        <div class="modal_title"></div>
+        <div class="modal_subtitle"></div>
+        <div class="modal_description"></div>
+        <div class="modal_age pet_properties"></div>
+        <div class="modal_inoculations pet_properties"></div>
+        <div class="modal_diseases pet_properties"></div>
+        <div class="modal_parasites pet_properties"></div>
+      </div>
+    </div>
+    </div>    
+    <div id="overlay"></div>    
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
