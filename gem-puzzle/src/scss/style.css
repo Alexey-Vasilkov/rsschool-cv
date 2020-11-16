@@ -1,0 +1,143 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: pixeboy;
+  src: url(../assets/Pixeboy-z8XGD.ttf);
+}
+
+html {
+  font-family: pixeboy;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.game-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.game-screen__button {
+  font-size: 4vh;
+  font-family: pixeboy;
+  text-align: center;
+  padding: 1px;
+  border: 6px solid black;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
+
+.game-screen__button:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game-controls {
+  padding-top: 1vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.end-game__button {
+  font-size: 4vh;
+  font-family: pixeboy;
+  text-align: center;
+  padding: 1px;
+  border: 6px solid black;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
+
+.reset__button {
+  font-size: 4vh;
+  font-family: pixeboy;
+  text-align: center;
+  padding: 1px;
+  border: 6px solid black;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
+
+.game-info {
+  width: 100%;
+  padding: 1rem 0 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 5vh;
+}
+
+.last-screen {
+  display: none;
+}
+
+.last-screen__content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10%;
+  font-size: 6vh;
+}
+
+.last-screen__button {
+  margin: 5vh 0 3vh;
+  font-size: 4vh;
+  font-family: pixeboy;
+  text-align: center;
+  padding: 1px;
+  border: 6px solid black;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
+
+.last-screen__button:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.select_option {
+  font-family: pixeboy;
+  font-size: 6vh;
+  padding: 2vh;
+  margin-top: 2vh;
+}
+/*# sourceMappingURL=style.css.map */
